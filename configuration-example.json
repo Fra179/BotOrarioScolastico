@@ -1,0 +1,43 @@
+{
+  "enable_gm": true,
+  "city_code": "214966",
+  "notification_time": "18:24",
+  "messages": {
+    "start": "Ciao <b>{name}</b>\nQuesto bot ti dir\u00e0 l'orario dei vari giorni di scuola\nPer entrare nella classe virtuale <a href=\"https://meet.google.com/qyk-yaie-xro\">clicca qui</a>\n\nP.s.: Forza 3ASQ",
+    "school_day": "Buongiorno <b>{name}</b>, oggi \u00e8 {day}, ecco le previsioni meteo:\n\n{weather}\n\nSei pronto per tornare a scuola?\n\nEcco a te l'orario di oggi:\n{subjects_schedule}\n\nPer entrare nella classe virtuale <a href=\"https://meet.google.com/qyk-yaie-xro\">clicca qui</a>",
+    "free_day": "Buongiorno <b>{name}</b>, oggi \u00e8 {day} e non c'\u00e8 scuola... lo vuoi un bel <a href=\"https://www.repstatic.it/content/nazionale/img/2017/11/23/175406476-f5fb667e-5d5e-4acb-b67f-8143a1f325d8.jpg\">\u2615</a>?",
+    "info": "Questo bot \u00e8 stato creato da <a href=\"t.me/Francesco_DB\">Francesco</a>.\n\nCome si potr\u00e0 intuire dal nome, con questo bot potrai sempre avare a portata di mano il tuo orario scolastico e, come se non bastasse, ti dar\u00e0 il buongiorno ogni mattina ricordandoti tutte le materie che avrai durante la giornata.\n\nIl codice sorgente \u00e8 reperibile su GitHub <a href=\"https://github.com/Fra179/orarioscolastico\">a questo link</a>.\nSentitevi liberi di proporre modifiche al codice o, pi\u00f9 semplicemente, di clonare la repo e di usare il bot per la vostra classe.",
+    "settings": "Seleziona le impostazioni da modificare:"
+  },
+  "days_translation": {
+    "mon": "Luned\u00ec",
+    "tue": "Marted\u00ec",
+    "wed": "Mercoled\u00ec",
+    "thu": "Gioved\u00ec",
+    "fri": "Venerd\u00ec",
+    "sat": "Sabato",
+    "sun": "Domenica"
+  },
+  "subjects_schedule": {
+    "mon": [
+      "Maths (Prof Name)",
+      "Italian (Other Prof name)"
+    ],
+    "tue": [
+      "Spanish Inquisition (Unexpected)",
+      "And so on (ik, it's simple)"
+    ],
+    "wed": [
+
+    ],
+    "thu": [
+
+    ],
+    "fri": [
+
+    ],
+    "sat": [
+
+    ]
+  }
+}

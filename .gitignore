@@ -1,0 +1,5 @@
+**.pyc
+venv/*
+**.db
+.idea/
+configuration.json
