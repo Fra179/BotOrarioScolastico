@@ -3,3 +3,4 @@ venv/*
 **.db
 .idea/
 configuration.json
+*.service

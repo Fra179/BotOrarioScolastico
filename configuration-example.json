@@ -1,7 +1,7 @@
 {
   "enable_gm": true,
   "city_code": "214966",
-  "notification_time": "18:24",
+  "notification_time": "10:04",
   "messages": {
     "start": "Ciao <b>{name}</b>\nQuesto bot ti dir\u00e0 l'orario dei vari giorni di scuola\nPer entrare nella classe virtuale <a href=\"https://meet.google.com/qyk-yaie-xro\">clicca qui</a>\n\nP.s.: Forza 3ASQ",
     "school_day": "Buongiorno <b>{name}</b>, oggi \u00e8 {day}, ecco le previsioni meteo:\n\n{weather}\n\nSei pronto per tornare a scuola?\n\nEcco a te l'orario di oggi:\n{subjects_schedule}\n\nPer entrare nella classe virtuale <a href=\"https://meet.google.com/qyk-yaie-xro\">clicca qui</a>",
@@ -28,16 +28,20 @@
       "And so on (ik, it's simple)"
     ],
     "wed": [
-
+      "Spanish Inquisition (Unexpected)",
+      "And so on (ik, it's simple)"
     ],
     "thu": [
-
+      "Spanish Inquisition (Unexpected)",
+      "And so on (ik, it's simple)"
     ],
     "fri": [
-
+      "Spanish Inquisition (Unexpected)",
+      "And so on (ik, it's simple)"
     ],
     "sat": [
-
+      "Spanish Inquisition (Unexpected)",
+      "And so on (ik, it's simple)"
     ]
   }
 }

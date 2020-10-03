@@ -30,7 +30,7 @@ class Handlers:
         self.c.attach_weather(self.w)
         self.k = Keyboard(self.c)
         self.b = bot
-        GoodMorning(self.b, self.c, self.k, self.c.notification_time).start()
+        GoodMorning(self.b, self.c, self.k).start()
 
     def _generate_photo(self) -> io.BytesIO:
         i = io.BytesIO()

@@ -9,21 +9,24 @@ from bot.database.DBStructure import db_session, User, select, commit
 
 
 class GoodMorning(Thread):
-    def __init__(self, bot: Bot, config: Configuration, keyboard: Keyboard, notification_time: str = "06:00"):
+    def __init__(self, bot: Bot, config: Configuration, keyboard: Keyboard):
         self.bot = bot
         self.c = config
         self.k = keyboard
-        self.notification_time = datetime.strptime(notification_time, "%H:%M")
         super().__init__()
 
     def run(self):
         while 1:
             if not self.c.enable_gm:
+                print("Not Enabled")
                 time.sleep(300)
                 continue
             now = datetime.now()
-            if self.c.enable_gm and now.hour == self.notification_time.hour and \
-                    now.minute == self.notification_time.minute:
+            print("Checking")
+            print(now.hour, now.minute, self.c.notification_time.hour, self.c.notification_time.minute)
+            if now.hour == self.c.notification_time.hour and \
+                    now.minute == self.c.notification_time.minute:
+                print("Done")
                 with db_session:
                     for user in select(x for x in User if not x.stopped and not x.stop_gm):
                         # if user.was_notified:
@@ -43,5 +46,7 @@ class GoodMorning(Thread):
                         )
                         # user.was_notified = True
                         commit()
+                    print("sleeping 30")
                     time.sleep(30)
+                print("sleeping 30")
             time.sleep(30)

@@ -146,7 +146,7 @@ class Configuration:
         self._enable_gm = self._data.get("enable_gm", False)
         self._school_day_message = self._data["messages"]["school_day"]
         self._free_day_message = self._data["messages"]["free_day"]
-        self._notification_time = self._data["notification_time"]
+        self._notification_time = datetime.strptime(self._data["notification_time"], "%H:%M")
         self._info = self._data["messages"]["info"]
         self._days_translation = self._data["days_translation"]
         self._subjects_schedule = {k: v for k, v in self._data["subjects_schedule"].items() if
