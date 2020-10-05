@@ -183,8 +183,9 @@ class Configuration:
         ]
 
         for k, v in params:
-            if callable(v):
-                v = v()
-            message = message.replace(k, v)
+            if k in message:
+                if callable(v):
+                    v = v()
+                message = message.replace(k, v)
 
         return message
