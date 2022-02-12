@@ -90,7 +90,8 @@ class Handlers:
                 disable_web_page_preview=True
             )
         elif len(payload) > 1 and self.db_utils.is_valid_token(payload[1]):
-            self.db_utils.add_user(update.message.chat.id, update.message.chat.name, update.message.chat.username)
+            print(update.message.chat)
+            self.db_utils.add_user(update.message.chat.id, update.message.chat.first_name, update.message.chat.username)
             update.message.reply_text(
                 self.c.get_formatted_message(self.c.start_message, chat_id),
                 parse_mode=ParseMode.HTML,

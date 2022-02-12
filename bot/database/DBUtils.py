@@ -32,6 +32,8 @@ class DBUtils:
     def add_user(self, chat_id: int, name: str, username: str):
         with db_session:
             if not self.is_user(chat_id):
+                if not username:
+                    username = "---"
                 User(chat_id=chat_id, name=name, username=username)
 
     def update_broadcast_message(self, chat_id: int, message: str):

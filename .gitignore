@@ -4,3 +4,4 @@ venv/*
 .idea/
 configuration.json
 *.service
+**.mp3

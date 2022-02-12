@@ -72,7 +72,10 @@ class WeatherAPI:
             "details": self.details
         }
         data = self._request(payload, "forecasts", "v1", "daily", "1day")
-        forecasts = data["DailyForecasts"][0]  # forecasts/v1/daily/1day/
+        try:
+            forecasts = data["DailyForecasts"][0]  # forecasts/v1/daily/1day/
+        except KeyError:
+            forecasts = "Limit reached with Weather APIs"
 
         if beautify:
             return self._beautify(data)
@@ -93,7 +96,11 @@ class WeatherAPI:
         }
 
     def _beautify(self, data):
-        forecasts = data["DailyForecasts"][0]
+        try:
+            forecasts = data["DailyForecasts"][0]
+        except KeyError:
+            forecasts = "Limit reached with Weather APIs"
+
         base = '🌎 <a href="{}">{}</a>\n🗒 Dettagli: {}\n🌡 Temperatura: {}°C/{}°C\n🌧 Precipitazioni: {}'.format(
             data["Headline"]["Link"],
             forecasts["Day"]["ShortPhrase"],

@@ -31,6 +31,7 @@ class Configuration:
         self._working_days = []
         self._db_utils = db_utils
         self.w = None
+        self._audio_name = None
         self.load_config()
 
     def attach_weather(self, weather: WeatherAPI):
@@ -111,6 +112,10 @@ class Configuration:
     def all_subjects(self):
         return self._all_subjects
 
+    @property
+    def audio_file(self):
+        return self._audio_name
+
     def _validate_config(self, config: dict):
         # Config validation
         if not config.get("messages"):
@@ -152,6 +157,10 @@ class Configuration:
         self._subjects_schedule = {k: v for k, v in self._data["subjects_schedule"].items() if
                                    k in self._days_translation.keys() and len(v) > 0}
         self._city_code = self._data.get("city_code")
+        self._audio_name = self._data.get("audio_file")
+
+        if not self._audio_name:
+            print("Audio file not setted")
 
         for _, v in self._subjects_schedule.items():
             for m in v:

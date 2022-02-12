@@ -31,6 +31,8 @@ class GoodMorning(Thread):
                     for user in select(x for x in User if not x.stopped and not x.stop_gm):
                         # if user.was_notified:
                         #    continue
+                        if self.c.audio_file is not None:
+                            self.bot.send_voice(chat_id=user.chat_id, voice=open(self.c.audio_file, 'rb'))
                         if datetime.now().strftime('%a').lower() in self.c.working_days:
                             message = self.c.get_formatted_message(self.c.school_day_message, user.chat_id)
                             disable_web_page_preview = True
